@@ -5,6 +5,8 @@ workflows:
     instance_type: mac_mini_m2
     scripts:
       - echo "Iniciando compilación..."
+      - flutter update
+      - flutter upgrade
       - flutter build apk --release
     artifacts:
       - build/**/outputs/**/*.apk
